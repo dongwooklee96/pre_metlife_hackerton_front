@@ -5,15 +5,16 @@ import { Layout } from '../layout/Layout';
 import { Error } from '../pages/Error';
 import { Main } from '../pages/Main';
 import { Sample } from '../pages/Sample';
+import { RoutesNames } from './routes_names';
 
 export default function Router() {
   return (
     <ErrorBoundary FallbackComponent={Error}>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Main />} />
-          <Route path="/sample" element={<Sample />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path={RoutesNames.home} element={<Main />} />
+          <Route path={RoutesNames.sample} element={<Sample />} />
+          <Route path={RoutesNames.wildcards} element={<NotFound />} />
         </Route>
       </Routes>
     </ErrorBoundary>

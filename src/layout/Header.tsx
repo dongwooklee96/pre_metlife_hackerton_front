@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
+import { RoutesNames } from '../routes/routes_names';
 
 const user = {
   name: 'Tom Cook',
@@ -37,7 +38,7 @@ export default function Header() {
                 <div className="flex h-16 items-center justify-between">
                   <div className="flex items-center">
                     <div className="shrink-0">
-                      <Link to={'/'}>
+                      <Link to={RoutesNames.home}>
                         <img
                           className="size-8"
                           src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=300"
