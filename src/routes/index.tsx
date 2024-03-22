@@ -14,8 +14,8 @@ export default function Router() {
         <Route element={<Layout />}>
           <Route path={RoutesNames.home} element={<Main />} />
           <Route path={RoutesNames.sample} element={<Sample />} />
-          <Route path={RoutesNames.wildcards} element={<NotFound />} />
         </Route>
+        <Route path={RoutesNames.wildcards} element={<NotFound />} />
       </Routes>
     </ErrorBoundary>
   );
